@@ -1,11 +1,13 @@
-package com.aquent.crudapp.data.dao;
+package com.aquent.crudapp.person;
 
-import com.aquent.crudapp.domain.Person;
 import java.util.List;
+
+import org.springframework.stereotype.Repository;
 
 /**
  * Operations on the "person" table.
  */
+@Repository
 public interface PersonDao {
 
     /**

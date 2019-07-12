@@ -1,32 +1,27 @@
-package com.aquent.crudapp.service;
+package com.aquent.crudapp.person;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.aquent.crudapp.data.dao.PersonDao;
-import com.aquent.crudapp.domain.Person;
 
 /**
  * Default implementation of {@link PersonService}.
  */
+@Component
 public class DefaultPersonService implements PersonService {
 
-    private PersonDao personDao;
-    private Validator validator;
+    private final PersonDao personDao;
+    private final Validator validator;
 
-    public void setPersonDao(PersonDao personDao) {
+    public DefaultPersonService(PersonDao personDao, Validator validator) {
         this.personDao = personDao;
-    }
-
-    public void setValidator(Validator validator) {
         this.validator = validator;
     }
 
