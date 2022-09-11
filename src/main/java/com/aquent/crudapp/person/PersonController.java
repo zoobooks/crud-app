@@ -10,11 +10,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RestController;
+
 
 /**
  * Controller for handling basic person management operations.
  */
+
 @Controller
+@RestController
 @RequestMapping("person")
 public class PersonController {
 
@@ -31,6 +36,7 @@ public class PersonController {
      *
      * @return list view populated with the current list of people
      */
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "list")
     public ModelAndView list() {
         ModelAndView mav = new ModelAndView("person/list");
