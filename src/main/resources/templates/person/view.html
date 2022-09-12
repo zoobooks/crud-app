@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>View Person</title>
 </head>
 <body>
+<tbody>
+<th:block th:person>
+    <tr>
+        <td th:text="${person.firstName}" attr=""onclick|>First</td>
+        <td th:text="${person.lastName}">Last</td>
+        <td th:text="${person.streetAddress}">streetAddress</td>
+        <td th:text="${person.city}">first.last@email.com</td>
+        <td th:text="${person.state}">first.last@email.com</td>
+        <td th:text="${person.zipCode}">first.last@email.com</td>
+    </tr>
+</th:block>
+
 
 </body>
 </html>
