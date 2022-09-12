@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import './PersonListing.jsx';
 import axios from 'axios';
 import PersonListing from './PersonListing.jsx';
 import EditPerson from './EditPerson.jsx';
+import CreatePerson from './EditPerson.jsx';
 const backendAdd = `http://localhost:8081/`;
 
 

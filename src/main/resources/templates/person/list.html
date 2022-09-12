@@ -22,7 +22,7 @@
         <tbody>
           <th:block th:each="person : ${persons}">
             <tr>
-              <td th:text="${person.firstName}">First</td>
+              <td th:text="${person.firstName}" attr=""onclick|>First</td>
               <td th:text="${person.lastName}">Last</td>
               <td th:text="${person.emailAddress}">first.last@email.com</td>
               <td>

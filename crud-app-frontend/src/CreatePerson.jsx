@@ -1,6 +1,6 @@
 import React from 'react';c
 
-onst CreatePerson = () => {
+const CreatePerson = () => {
     return(
         <div>
             <h1>Edit Person</h1>
